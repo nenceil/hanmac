@@ -142,6 +142,7 @@ include 'includes/header.php';
                     ?>
 
                     <?php if (count($variants) > 0): ?>
+                        <?php if (count($variants) > 1): ?>
                         <div class="variant-tabs">
                             <?php foreach ($variants as $index => $variant): ?>
                                 <button class="variant-tab <?php echo $index === 0 ? 'active' : ''; ?>" 
@@ -150,6 +151,7 @@ include 'includes/header.php';
                                 </button>
                             <?php endforeach; ?>
                         </div>
+                        <?php endif; ?>
 
                         <div class="specs-content">
                             <?php foreach ($variants as $index => $variant): ?>

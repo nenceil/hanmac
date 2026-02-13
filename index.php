@@ -17,7 +17,7 @@ include 'includes/header.php';
         <section id="catalog" class="category-section">
             <div class="category-header">
                 <h2><?php echo __('categories'); ?></h2>
-                <a href="catalog.php" class="see-all-link"><?php echo __('see_all'); ?> <span class="arrow">↗</span></a>
+                <a href="categories.php" class="see-all-link"><?php echo __('see_all'); ?> <span class="arrow">↗</span></a>
             </div>
             <div class="category-grid">
                 <?php
