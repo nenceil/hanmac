@@ -1,0 +1,59 @@
+/* Slider Styles */
+.main-image-frame {
+    position: relative;
+    /* Ensure existing styles are kept/extended */
+    width: 100%;
+    /* aspect-ratio already defined in main css, but can override if needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Hide overflow if doing a sliding track, though we are doing simple replace */
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    /* Half of height (40px) to center, replaces transform */
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.slider-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .slider-btn {
+        width: 45px;
+        height: 45px;
+        background-color: rgba(255, 255, 255, 0.9);
+        font-size: 22px;
+    }
+}
+
+/* Ensure images fit well */
+#mainImage {
+    transition: opacity 0.3s ease-in-out;
+}
